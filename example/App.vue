@@ -2,6 +2,9 @@
 	<div class="example">
 		<div class="nav-bar">
 			<div class="nav-item">
+				<router-link to="/avatar">Avatar</router-link>
+			</div>
+			<div class="nav-item">
 				<router-link to="/button">Button</router-link>
 			</div>
 		</div>

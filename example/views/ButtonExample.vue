@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Space direction="vertical">
+		<Space vertical>
 			<Space><Button>Button</Button></Space>
 
 			<Button :disabled="true">Disabled</Button>
@@ -59,8 +59,7 @@ import { defineComponent, ref } from 'vue'
 import Button from '../../src/components/button/index.vue'
 import Space from '../../src/components/space/index.vue'
 import { Icon } from '@vicons/utils'
-import { User } from '@vicons/tabler'
-import { Affiliate, CloudDownload, BrandGithub, FaceId, Playlist } from '@vicons/tabler'
+import { User, Affiliate, CloudDownload, BrandGithub, FaceId, Playlist } from '@vicons/tabler'
 
 export default defineComponent({
 	name: 'ButtonExample',

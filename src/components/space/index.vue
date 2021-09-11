@@ -1,5 +1,5 @@
 <template>
-	<div class="__space__" :class="[direction, size]"><slot /></div>
+	<div class="__space__" :class="[size, vertical ? 'vertical' : 'horizontal']"><slot /></div>
 </template>
 
 <script lang="ts">
@@ -8,9 +8,9 @@ import { defineComponent, PropType, toRefs } from 'vue'
 export default defineComponent({
 	name: 'Space',
 	props: {
-		direction: {
-			type: String as PropType<'horizontal' | 'vertical'>,
-			default: 'horizontal'
+		vertical: {
+			type: Boolean,
+			default: false
 		},
 		size: {
 			type: String as PropType<'small' | 'medium' | 'large'>,
