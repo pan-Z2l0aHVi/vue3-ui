@@ -8,6 +8,10 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/button',
 		component: () => import('./views/ButtonExample.vue')
+	},
+	{
+		path: '/divider',
+		component: () => import('./views/DividerExample.vue')
 	}
 ]
 export default routes

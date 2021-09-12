@@ -7,6 +7,9 @@
 			<div class="nav-item">
 				<router-link to="/button">Button</router-link>
 			</div>
+			<div class="nav-item">
+				<router-link to="/divider">Divider</router-link>
+			</div>
 		</div>
 		<div class="content">
 			<router-view></router-view>

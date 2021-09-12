@@ -89,7 +89,7 @@ export default defineComponent({
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 12px;
+	padding: 0 10px;
 	height: 32px;
 	border: 1px solid #ccc;
 	border-radius: 6px;
@@ -110,15 +110,15 @@ export default defineComponent({
 		border-radius: 50%;
 	}
 	&.text {
-		background: unset;
 		border: none;
+		background: unset;
 	}
 	.icon {
 		display: contents;
 		font-size: 18px;
 	}
 	.label {
-		padding: 0 6px;
+		padding: 0 8px;
 	}
 }
 </style>
