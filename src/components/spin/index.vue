@@ -31,6 +31,7 @@ export default defineComponent({
 }
 .spin-wrapper {
 	display: inline-block;
+	box-sizing: border-box;
 	line-height: 0; // 消除<img>底部 3px
 	&.spinning {
 		animation: rotate infinite linear;

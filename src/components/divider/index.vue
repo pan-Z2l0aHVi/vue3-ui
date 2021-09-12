@@ -24,6 +24,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .divider {
+	box-sizing: border-box;
 	margin: 24px 0;
 	width: 100%;
 	height: 1px;

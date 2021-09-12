@@ -10,8 +10,16 @@ const routes: RouteRecordRaw[] = [
 		component: () => import('./views/ButtonExample.vue')
 	},
 	{
+		path: '/card',
+		component: () => import('./views/CardExample.vue')
+	},
+	{
 		path: '/divider',
 		component: () => import('./views/DividerExample.vue')
+	},
+	{
+		path: '/modal',
+		component: () => import('./views/ModalExample.vue')
 	}
 ]
 export default routes

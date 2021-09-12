@@ -32,6 +32,7 @@ export default defineComponent({
 // 全局 class 名特殊处理预防冲突
 .__space__ {
 	display: flex;
+	box-sizing: border-box;
 	&.horizontal {
 		flex-flow: row wrap;
 		&.small {
@@ -56,8 +57,8 @@ export default defineComponent({
 		}
 	}
 	&.vertical {
-		flex-direction: column;
 		align-items: flex-start;
+		flex-direction: column;
 		width: 100%;
 		&.small {
 			> * {

@@ -1,5 +1,5 @@
 <template>
-	<Press :disabled="disabled" :block="block">
+	<Press :disabled="disabled || loading" :block="block">
 		<button
 			class="button"
 			:class="{
@@ -89,8 +89,10 @@ export default defineComponent({
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 10px;
+	box-sizing: border-box;
+	padding: 0 16px;
 	height: 32px;
+	outline-color: #000;
 	border: 1px solid #ccc;
 	border-radius: 6px;
 	background: #fff;

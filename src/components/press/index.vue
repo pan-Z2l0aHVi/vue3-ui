@@ -49,6 +49,7 @@ export default defineComponent({
 @import '../../styles/transitions.scss';
 .press {
 	display: inline-block;
+	box-sizing: border-box;
 	transition: filter 0.1s;
 	&.block {
 		display: block;

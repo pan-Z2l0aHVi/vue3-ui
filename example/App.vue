@@ -1,14 +1,22 @@
 <template>
 	<div class="example">
-		<div class="nav-bar">
-			<div class="nav-item">
-				<router-link to="/avatar">Avatar</router-link>
-			</div>
-			<div class="nav-item">
-				<router-link to="/button">Button</router-link>
-			</div>
-			<div class="nav-item">
-				<router-link to="/divider">Divider</router-link>
+		<div class="aside">
+			<div class="nav-bar">
+				<div class="nav-item">
+					<router-link to="/avatar">Avatar</router-link>
+				</div>
+				<div class="nav-item">
+					<router-link to="/button">Button</router-link>
+				</div>
+				<div class="nav-item">
+					<router-link to="/card">Card</router-link>
+				</div>
+				<div class="nav-item">
+					<router-link to="/divider">Divider</router-link>
+				</div>
+				<div class="nav-item">
+					<router-link to="/modal">Modal</router-link>
+				</div>
 			</div>
 		</div>
 		<div class="content">
@@ -26,12 +34,14 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style>
 body {
 	margin: 0;
 }
+</style>
+<style lang="scss" scoped>
 #app {
-	color: #2c3e50;
+	color: #333639;
 	text-align: center;
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 
@@ -42,21 +52,27 @@ body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	.nav-bar {
+	.aside {
 		width: 200px;
-		height: 100%;
-		border-right: 1px solid #ccc;
-		.nav-item {
-			display: flex;
-			align-items: center;
-			padding: 0 16px;
-			height: 40px;
-			border-bottom: 1px solid #ccc;
+		.nav-bar {
+			position: fixed;
+			overflow-y: auto;
+			width: 200px;
+			height: 100%;
+			border-right: 1px solid #ccc;
+			.nav-item {
+				display: flex;
+				align-items: center;
+				padding: 0 16px;
+				height: 40px;
+				border-bottom: 1px solid #ccc;
+			}
 		}
 	}
 	.content {
+		overflow-y: auto;
 		flex: 1;
-		padding: 16px;
+		padding: 24px;
 	}
 }
 </style>
