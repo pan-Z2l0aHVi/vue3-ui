@@ -46,11 +46,9 @@ export default defineComponent({
 			y: 'center'
 		})
 		const mainRef = ref<HTMLElement>()
-		const onMaskClick = () => {
-			if (!props.maskClosable) return
-			emit('update:visible', false)
-		}
 		const setCoordinate = (event: MouseEvent) => {
+			console.log('click')
+
 			if (mainRef.value instanceof HTMLElement) {
 				triggerCoordinate.x = event.clientX
 				triggerCoordinate.y = event.clientY
@@ -72,6 +70,13 @@ export default defineComponent({
 				triggerCoordinate.x = 0
 				triggerCoordinate.y = 0
 			}, SWELL_DURATION)
+		}
+		const onMaskClick = () => {
+			if (props.maskClosable) {
+				emit('update:visible', false)
+			} else {
+				offCoordinateEvent()
+			}
 		}
 		watchEffect(() => {
 			if (!props.visible) {
