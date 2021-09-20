@@ -51,12 +51,6 @@ export default defineComponent({
 		Box,
 		Icon
 	},
-	props: {
-		round: {
-			type: Boolean,
-			default: false
-		}
-	},
 	setup() {
 		return {}
 	}

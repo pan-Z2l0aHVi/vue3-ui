@@ -41,7 +41,7 @@ body {
 </style>
 <style lang="scss" scoped>
 #app {
-	color: #333639;
+	// color: #333639;
 	text-align: center;
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 

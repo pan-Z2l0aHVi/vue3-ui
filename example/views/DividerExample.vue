@@ -18,12 +18,6 @@ export default defineComponent({
 	components: {
 		Divider
 	},
-	props: {
-		round: {
-			type: Boolean,
-			default: false
-		}
-	},
 	setup() {
 		return {}
 	}

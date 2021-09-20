@@ -1,7 +1,9 @@
 <template>
 	<div class="card" :class="{ bordered, 'can-hover': canHover }">
 		<div v-if="closable" class="close-icon" @click="$emit('close')">
-			<Icon><X /></Icon>
+			<Button circle>
+				<Icon><X /></Icon>
+			</Button>
 		</div>
 		<AspectRatio v-if="$slots.cover"><slot name="cover" /></AspectRatio>
 		<div v-if="title" class="header">
@@ -18,12 +20,13 @@
 <script lang="ts">
 import { defineComponent, toRefs } from 'vue'
 import AspectRatio from '../aspect-ratio/index.vue'
+import Button from '../button/index.vue'
 import { X } from '@vicons/tabler'
 import { Icon } from '@vicons/utils'
 
 export default defineComponent({
 	name: 'Card',
-	components: { AspectRatio, Icon, X },
+	components: { AspectRatio, Icon, X, Button },
 	props: {
 		title: {
 			type: String,
@@ -57,16 +60,18 @@ export default defineComponent({
 	box-sizing: border-box;
 	width: 100%;
 	border-radius: 8px;
-	background: #f8f8f8;
+	background: #fff;
 	text-align: start;
 	font-size: 14px;
 	.close-icon {
 		position: absolute;
 		top: 16px;
 		right: 16px;
-		color: #999;
-		font-size: 20px;
-		cursor: pointer;
+		:deep(.button.circle) {
+			border: 0;
+			background: #f4f4f4;
+			color: #444;
+		}
 	}
 	.header {
 		display: flex;
@@ -93,7 +98,6 @@ export default defineComponent({
 	}
 	&.bordered {
 		border: 1px solid #ddd;
-		background: #fff;
 	}
 	&.can-hover {
 		&:hover {

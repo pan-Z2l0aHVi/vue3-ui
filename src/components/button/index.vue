@@ -98,6 +98,7 @@ export default defineComponent({
 	background: #fff;
 	font-size: 14px;
 
+	user-select: none;
 	@include disabled;
 	&.block {
 		display: flex;

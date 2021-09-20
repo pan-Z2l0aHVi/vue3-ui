@@ -46,12 +46,6 @@ export default defineComponent({
 		User,
 		Button
 	},
-	props: {
-		round: {
-			type: Boolean,
-			default: false
-		}
-	},
 	setup() {
 		const pictures = reactive({
 			vueLogoPic,
